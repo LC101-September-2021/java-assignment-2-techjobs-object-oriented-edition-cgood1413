@@ -33,12 +33,16 @@ public class JobTest {
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
         assertEquals(testJob.getName(), "Product tester");
+
         assertTrue(testJob.getEmployer() instanceof Employer);
         assertEquals(testJob.getEmployer().getValue(), "ACME");
+
         assertTrue(testJob.getLocation() instanceof Location);
         assertEquals(testJob.getLocation().getValue(), "Desert");
+
         assertTrue(testJob.getPositionType() instanceof PositionType);
         assertEquals(testJob.getPositionType().getValue(), "Quality control");
+
         assertTrue(testJob.getCoreCompetency() instanceof CoreCompetency);
         assertEquals(testJob.getCoreCompetency().getValue(), "Persistence");
     }
@@ -53,6 +57,7 @@ public class JobTest {
 
     @Test
     public void testToString(){
+
         Job job1 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
         assertEquals(job1.toString(), "\nID: 3\n" +
                 "Name: Test job\n" +
@@ -68,6 +73,9 @@ public class JobTest {
                 "Location: Data not available\n" +
                 "Position Type: Tester\n" +
                 "Core Competency: Data not available\n");
+
+        assertTrue(job1.toString().startsWith("\n"));
+        assertTrue(job1.toString().endsWith("\n"));
     }
 
 }
