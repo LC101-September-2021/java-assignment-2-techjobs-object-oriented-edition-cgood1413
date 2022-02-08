@@ -16,18 +16,18 @@ import static org.junit.Assert.*;
 @RunWith(JUnit4.class)
 public class JobTest {
 
-    Job job1;
-    Job job2;
-//    Job job3;
-//    Job job4;
-
-    @Before
-    public void testJobTest(){
-        job1 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
-        job2 = new Job("", new Employer("TestEmployer"), new Location(""), new PositionType("Tester"), new CoreCompetency(""));
-//        job3 = new Job();
-//        job4 = new Job();
-    }
+//    Job job1;
+//    Job job2;
+////    Job job3;
+////    Job job4;
+//
+////    @Before
+////    public void testJobTest(){
+////        job1 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
+////        job2 = new Job("", new Employer("TestEmployer"), new Location(""), new PositionType("Tester"), new CoreCompetency(""));
+//////        job3 = new Job();
+//////        job4 = new Job();
+////    }
 
     @Test
     public void testSettingJobId(){
@@ -58,6 +58,8 @@ public class JobTest {
 
     @Test
     public void testJobsForEquality(){
+        Job job1 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
+        Job job2 = new Job("", new Employer("TestEmployer"), new Location(""), new PositionType("Tester"), new CoreCompetency(""));
         assertFalse(job1.equals(job2));
 
     }
@@ -65,7 +67,7 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField(){
         Job testJob = new Job("", new Employer("TestEmployer"), new Location(""), new PositionType("Tester"), new CoreCompetency(""));
-        assertEquals(testJob.toString(), "\nID: 5\n" +
+        assertEquals(testJob.toString(), "\nID: 3\n" +
                 "Name: Data not available\n" +
                 "Employer: TestEmployer\n" +
                 "Location: Data not available\n" +
@@ -94,7 +96,7 @@ public class JobTest {
         assertTrue(testJob.toString().contains("Position Type: " + testJob.getPositionType().getValue()));
         assertTrue(testJob.toString().contains("Core Competency: " + testJob.getCoreCompetency().getValue()));
 
-        assertEquals(testJob.toString(), "\nID: 8\n" +
+        assertEquals(testJob.toString(), "\nID: 4\n" +
                 "Name: Test job\n" +
                 "Employer: TestEmployer\n" +
                 "Location: St. Louis\n" +
