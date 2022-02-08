@@ -5,16 +5,16 @@ import java.util.Objects;
 public abstract class JobField {
 
     private int id;
-//    private static int nextId = 1;
+    private static int nextId = 1;
     private String value;
 
     public JobField() {
-//        id = nextId;
-//        nextId++;
+        id = nextId;
+        nextId++;
     }
 
     public JobField(String value) {
-//        this();
+        this();
         this.value = value.equals("") ? "Data not available" : value;
     }
 
@@ -45,9 +45,9 @@ public abstract class JobField {
         return id;
     }
 
-//    public static int getNextId() {
-//        return nextId;
-//    }
+    public static int getNextId() {
+        return nextId;
+    }
 
     public String getValue() {
         return value;
