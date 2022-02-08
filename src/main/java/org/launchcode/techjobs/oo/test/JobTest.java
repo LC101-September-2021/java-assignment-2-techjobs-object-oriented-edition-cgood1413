@@ -1,13 +1,9 @@
 package org.launchcode.techjobs.oo.test;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import org.launchcode.techjobs.oo.*;
-
-import java.io.PipedOutputStream;
-
 import static org.junit.Assert.*;
 
 /**
@@ -15,19 +11,6 @@ import static org.junit.Assert.*;
  */
 @RunWith(JUnit4.class)
 public class JobTest {
-
-//    Job job1;
-//    Job job2;
-////    Job job3;
-////    Job job4;
-//
-////    @Before
-////    public void testJobTest(){
-////        job1 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
-////        job2 = new Job("", new Employer("TestEmployer"), new Location(""), new PositionType("Tester"), new CoreCompetency(""));
-//////        job3 = new Job();
-//////        job4 = new Job();
-////    }
 
     @Test
     public void testSettingJobId(){
