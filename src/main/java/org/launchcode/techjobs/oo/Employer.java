@@ -7,11 +7,11 @@ public class Employer extends JobField {
 //    private int id;
 //    private static int nextId = 1;
 
-    public Employer(){
-        super();
-//        this.id = nextId;
-//        nextId++;
-    }
+//    public Employer(){
+//        super();
+////        this.id = nextId;
+////        nextId++;
+//    }
 
     public Employer(String value) {
         super(value);

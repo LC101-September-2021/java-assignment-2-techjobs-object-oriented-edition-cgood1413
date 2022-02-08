@@ -18,9 +18,14 @@ public class Main {
             System.out.println(job);
         }
 
-        System.out.println(job1.getEmployer().getId());
-        System.out.println(job2.getEmployer().getId());
-        System.out.println(job3.getEmployer().getId());
+//        System.out.println(job1.getId());
+//        System.out.println(job2.getId());
+//        System.out.println(job3.getId());
+//
+//        System.out.println(job1.getEmployer().getId());
+//        System.out.println(job2.getEmployer().getId());
+//        System.out.println(job3.getEmployer().getId());
+
     }
 
 }

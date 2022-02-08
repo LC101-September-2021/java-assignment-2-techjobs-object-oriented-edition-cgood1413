@@ -40,7 +40,6 @@ public abstract class JobField {
         this.value = value;
     }
 
-
     public int getId() {
         return id;
     }
