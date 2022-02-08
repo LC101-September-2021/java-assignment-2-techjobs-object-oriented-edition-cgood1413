@@ -16,6 +16,11 @@ import static org.junit.Assert.*;
 @RunWith(JUnit4.class)
 public class JobTest {
 
+//    @Before
+//    public void testJobTest(){
+//        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//    }
+
     @Test
     public void testSettingJobId(){
         Job job1 = new Job();
@@ -44,6 +49,25 @@ public class JobTest {
         Job job2 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
         assertFalse(job1.equals(job2));
 
+    }
+
+    @Test
+    public void testToString(){
+        Job job1 = new Job("Test job", new Employer("TestEmployer"), new Location("St. Louis"), new PositionType("Tester"), new CoreCompetency("Testing"));
+        assertEquals(job1.toString(), "\nID: 3\n" +
+                "Name: Test job\n" +
+                "Employer: TestEmployer\n" +
+                "Location: St. Louis\n" +
+                "Position Type: Tester\n" +
+                "Core Competency: Testing\n");
+
+        Job job2 = new Job("", new Employer("TestEmployer"), new Location(""), new PositionType("Tester"), new CoreCompetency(""));
+        assertEquals(job2.toString(), "\nID: 4\n" +
+                "Name: Data not available\n" +
+                "Employer: TestEmployer\n" +
+                "Location: Data not available\n" +
+                "Position Type: Tester\n" +
+                "Core Competency: Data not available\n");
     }
 
 }
