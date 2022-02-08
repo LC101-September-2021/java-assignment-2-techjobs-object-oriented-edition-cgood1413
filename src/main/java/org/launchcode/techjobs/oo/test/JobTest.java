@@ -40,6 +40,7 @@ public class JobTest {
     public void testJobConstructorSetsAllFields(){
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
+        assertTrue(testJob.getName() instanceof String);
         assertEquals(testJob.getName(), "Product tester");
 
         assertTrue(testJob.getEmployer() instanceof Employer);
@@ -60,17 +61,6 @@ public class JobTest {
         assertFalse(job1.equals(job2));
 
     }
-
-//    @Test
-//    public void testToString(){
-//        assertEquals(job1.toString(), "\nID: 3\n" +
-//                "Name: Test job\n" +
-//                "Employer: TestEmployer\n" +
-//                "Location: St. Louis\n" +
-//                "Position Type: Tester\n" +
-//                "Core Competency: Testing\n");
-//
-//    }
 
     @Test
     public void testToStringHandlesEmptyField(){
